@@ -20,6 +20,7 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
+// eslint-disable-next-line no-unused-vars
 const analytics = firebase.analytics();
 
 function App() {
@@ -66,7 +67,7 @@ function SignOut() {
 
 function ChatRoom() {
   const dummy = useRef();
-  
+
   const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
 
